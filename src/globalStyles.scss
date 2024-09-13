@@ -19,6 +19,11 @@
     height: -webkit-fill-available;
   }
 }
+@supports (height: viewport-fill) {
+  .h-screen {
+    height: viewport-fill;  // For browsers supporting this feature in future
+  }
+}
 
 /* Global styles */
 * {
