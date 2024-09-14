@@ -8,11 +8,10 @@ import {
   SparklesIcon,
 } from '@heroicons/react/24/outline';
 
-import GithubIcon from '../components/Icon/GithubIcon';
 import InstagramIcon from '../components/Icon/InstagramIcon';
-import LinkedInIcon from '../components/Icon/LinkedInIcon';
-import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
-import TwitterIcon from '../components/Icon/TwitterIcon';
+import HearThisIcon from '../components/Icon/HearThisIcon';
+import SoundCloudIcon from '../components/Icon/SoundCloudIcon';
+import FacebookIcon from '../components/Icon/FacebookIcon';
 import heroImage from '../images/header-background.webp';
 import newHealing01 from '../images/pictures/01-new-healing-2017.jpg';
 import newHealing02 from '../images/pictures/02-new-healing-2017.jpg';
@@ -97,7 +96,7 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
  */
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: `Rudraksha.`,
+  title: `Rudraksha.`,
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
@@ -125,19 +124,19 @@ export const heroData: Hero = {
   actions: [
     {
       href: 'https://hearthis.at/rudra',
-      text: 'Rudraksha @ Hearthis',
+      text: 'Listen @ HearThis',
       primary: true,
       Icon: ArrowRightOnRectangleIcon,
     },
     {
       href: 'https://soundcloud.com/sounds-of-kali',
-      text: 'Sounds of Kali @ Soundcloud',
+      text: 'Listen @ Soundcloud',
       primary: true,
       Icon: ArrowRightOnRectangleIcon,
     },
     {
       href: 'https://sounds-of-kali.bandcamp.com',
-      text: 'Sounds of Kali @ Bandcamp',
+      text: 'Listen @ Bandcamp',
       primary: true,
       Icon: ArrowRightOnRectangleIcon,
     },
@@ -300,7 +299,7 @@ export const pictureItems: PictureItem[] = [
   {
     title: 'Producing Mix Kalidelic, Brazil',
     description: 'Producing Kalidelic Mixtape.',
-    url: 'Kalidelic - (Rudras Deephaux Mixtape)',
+    url: 'https://soundcloud.com/sounds-of-kali/kalidelic?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing',
     showLink: true,
     showLinkDescr: true,
     linkDescr: 'Listen Kalidelic Mix',
@@ -690,18 +689,18 @@ export const contact: ContactSection = {
     },
     {
       type: ContactType.Location,
-      text: 'Victoria BC, Canada',
-      href: 'https://www.google.ca/maps/place/Victoria,+BC/@48.4262362,-123.376775,14z',
+      text: 'Povoado do Moinho, Alto Paraíso de Goiás, Brazil',
+      href: 'https://maps.app.goo.gl/QB9jDKyGPepwaSDB7',
     },
     {
       type: ContactType.Instagram,
-      text: '@tbakerx',
-      href: 'https://www.instagram.com/tbakerx/',
+      text: '@rudra_ayahuma',
+      href: 'https://www.instagram.com/rudra_ayahuma/',
     },
     {
-      type: ContactType.Github,
-      text: 'tbakerx',
-      href: 'https://github.com/tbakerx',
+      type: ContactType.Facebook,
+      text: '@Rudra Ayahuma Selva',
+      href: 'https://www.facebook.com/rudra.ayahuma.selva',
     },
   ],
 };
@@ -710,9 +709,8 @@ export const contact: ContactSection = {
  * Social items
  */
 export const socialLinks: Social[] = [
-  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/tbakerx'},
-  {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8553186/tim-baker'},
-  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/timbakerx/'},
-  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/reactresume/'},
-  {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/TimBakerx'},
+  {label: 'SoundCloud', Icon: SoundCloudIcon, href: 'https://soundcloud.com/sounds-of-kali'},
+  {label: 'HearThis', Icon:  HearThisIcon, href: 'https://hearthis.at/rudra/'},
+  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/rudra_ayahuma'},
+  {label: 'Facebook', Icon:  FacebookIcon, href: 'https://www.facebook.com/rudra.ayahuma.selva'},
 ];

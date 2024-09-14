@@ -22,7 +22,7 @@ export interface HomepageMeta {
  */
 export interface Hero {
   imageSrc: string;
-  name: string;
+  title: string;
   description: JSX.Element;
   actions: HeroActionItem[];
 }
@@ -132,10 +132,7 @@ export const ContactType = {
   Email: 'Email',
   Phone: 'Phone',
   Location: 'Location',
-  Github: 'Github',
-  LinkedIn: 'LinkedIn',
   Facebook: 'Facebook',
-  Twitter: 'Twitter',
   Instagram: 'Instagram',
 } as const;
 
