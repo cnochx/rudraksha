@@ -76,7 +76,7 @@ export interface SkillGroup {
 /**
  * Portfolio section
  */
-export interface PortfolioItem {
+export interface PictureItem {
   title: string;
   description: string;
   url: string;
@@ -96,12 +96,12 @@ export interface TimelineItem {
 /**
  * Testimonial section
  */
-export interface TestimonialSection {
+export interface PicturesSection {
   imageSrc?: string | StaticImageData;
-  testimonials: Testimonial[];
+  testimonials: Picture[];
 }
 
-export interface Testimonial {
+export interface Picture {
   image?: string;
   name: string;
   text: string;
