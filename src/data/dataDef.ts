@@ -76,10 +76,22 @@ export interface SkillGroup {
 /**
  * Portfolio section
  */
+export interface Header {
+  section: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  content: JSX.Element;
+  showSpacer: boolean;
+}
+
 export interface PictureItem {
   title: string;
   description: string;
   url: string;
+  showLink: boolean;
+  showLinkDescr: boolean;
+  linkDescr: string;
   image: string | StaticImageData;
 }
 

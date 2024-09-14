@@ -3,13 +3,13 @@ import {FC, memo, UIEventHandler, useCallback, useEffect, useMemo, useRef, useSt
 
 import {isApple, isMobile} from '../../config';
 import {SectionId, testimonial} from '../../data/data';
-import {Testimonial} from '../../data/dataDef';
+import {Picture} from '../../data/dataDef';
 import useInterval from '../../hooks/useInterval';
 import useWindow from '../../hooks/useWindow';
 import QuoteIcon from '../Icon/QuoteIcon';
 import Section from '../Layout/Section';
 
-const Testimonials: FC = memo(() => {
+const Pictures: FC = memo(() => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
   const [scrollValue, setScrollValue] = useState(0);
   const [parallaxEnabled, setParallaxEnabled] = useState(false);
@@ -84,10 +84,10 @@ const Testimonials: FC = memo(() => {
               className="no-scrollbar flex w-full touch-pan-x snap-x snap-mandatory gap-x-6 overflow-x-auto scroll-smooth"
               onScroll={handleScroll}
               ref={scrollContainer}>
-              {testimonials.map((testimonial, index) => {
+              {testimonials.map((picture: Picture, index: number) => {
                 const isActive = index === activeIndex;
                 return (
-                  <Testimonial isActive={isActive} key={`${testimonial.name}-${index}`} testimonial={testimonial} />
+                  <Picture isActive={isActive} key={`${picture.name}-${index}`} picture={picture}/>
                 );
               })}
             </div>
@@ -113,8 +113,8 @@ const Testimonials: FC = memo(() => {
   );
 });
 
-const Testimonial: FC<{testimonial: Testimonial; isActive: boolean}> = memo(
-  ({testimonial: {text, name, image}, isActive}) => (
+const Picture: FC<{picture: Picture; isActive: boolean}> = memo(
+  ({picture: {text, name, image}, isActive}) => (
     <div
       className={classNames(
         'flex w-full shrink-0 snap-start snap-always flex-col items-start gap-y-4 p-2 transition-opacity duration-1000 sm:flex-row sm:gap-x-6',
@@ -123,7 +123,7 @@ const Testimonial: FC<{testimonial: Testimonial; isActive: boolean}> = memo(
       {image ? (
         <div className="relative h-14 w-14 shrink-0 sm:h-16 sm:w-16">
           <QuoteIcon className="absolute -left-2 -top-2 h-4 w-4 stroke-black text-white" />
-          <img className="h-full w-full rounded-full" src={image} />
+          <img alt={name} className="h-full w-full rounded-full" src={image}/>
         </div>
       ) : (
         <QuoteIcon className="h-5 w-5 shrink-0 text-white sm:h-8 sm:w-8" />
@@ -136,4 +136,4 @@ const Testimonial: FC<{testimonial: Testimonial; isActive: boolean}> = memo(
   ),
 );
 
-export default Testimonials;
+export default Pictures;
