@@ -62,7 +62,6 @@ import {
   HomepageMeta,
   PictureItem,
   PicturesSection,
-  SkillGroup,
   Social,
   TimelineItem,
 } from './dataDef';
@@ -84,7 +83,6 @@ export const SectionId = {
   Contact: 'contact',
   Portfolio: 'Pictures',
   Resume: 'resume',
-  Skills: 'skills',
   Stats: 'stats',
   Testimonials: 'testimonials',
 } as const;
@@ -165,80 +163,6 @@ export const aboutData: About = {
     {label: 'Employment', text: 'Instant Domains, inc.', Icon: BuildingOffice2Icon},
   ],
 };
-
-/**
- * Skills section
- */
-export const skills: SkillGroup[] = [
-  {
-    name: 'Spoken languages',
-    skills: [
-      {
-        name: 'English',
-        level: 10,
-      },
-      {
-        name: 'French',
-        level: 4,
-      },
-      {
-        name: 'Spanish',
-        level: 3,
-      },
-    ],
-  },
-  {
-    name: 'Frontend development',
-    skills: [
-      {
-        name: 'React',
-        level: 9,
-      },
-      {
-        name: 'Typescript',
-        level: 7,
-      },
-      {
-        name: 'GraphQL',
-        level: 6,
-      },
-    ],
-  },
-  {
-    name: 'Backend development',
-    skills: [
-      {
-        name: 'Node.js',
-        level: 8,
-      },
-      {
-        name: 'Rust',
-        level: 5,
-      },
-      {
-        name: 'Golang',
-        level: 4,
-      },
-    ],
-  },
-  {
-    name: 'Mobile development',
-    skills: [
-      {
-        name: 'React Native',
-        level: 9,
-      },
-      {
-        name: 'Flutter',
-        level: 4,
-      },
-      {
-        name: 'Swift',
-        level: 3,
-      },
-    ],
-  },
-];
 
 /**
  * Portfolio section
